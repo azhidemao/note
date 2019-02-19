@@ -1,0 +1,2 @@
+使用@ResponseBody，transient字段能被序列化么？
+答案是不可以，因为@ResponseBody也没有将返回值序列化，序列化指的是将对象转换成以字节序列的形式来表示。
