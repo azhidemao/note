@@ -4,6 +4,11 @@ package com.example.note.algorithm.fibonacci;
  * Created by JIAZ on 2019/2/20.
  */
 
+import sun.misc.Unsafe;
+
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 /**
  * question:
  * 一只青蛙一次可以跳上1级台阶，也可以跳上2级……它也可以跳上n级。求该青蛙跳上一个n级的台阶总共有多少种跳法。
@@ -29,4 +34,6 @@ public class FrogQuestion {
         FrogQuestion frogQuestion = new FrogQuestion();
         System.out.println(frogQuestion.solve(4));
     }
+
+
 }
