@@ -1,9 +1,15 @@
 package com.example.note.algorithm.sort;
 
+import com.example.note.collection.map.JHashMap;
+import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  * Created by JIAZ on 2019/2/21.
  */
 public class QucikSort {
+
+    @Autowired
+    private JHashMap jHashMap;
 
     public static void main(String[] args) {
         System.out.println("Hello World");
@@ -25,16 +31,18 @@ public class QucikSort {
 
         while (end > start) {
             //从后往前比较
-            while (end > start && a[end] >= key)  //如果没有比关键值小的，比较下一个，直到有比关键值小的交换位置，然后又从前往后比较
+            while (end > start && a[end] >= key) {  //如果没有比关键值小的，比较下一个，直到有比关键值小的交换位置，然后又从前往后比较
                 end--;
+            }
             if (a[end] <= key) {
                 int temp = a[end];
                 a[end] = a[start];
                 a[start] = temp;
             }
             //从前往后比较
-            while (end > start && a[start] <= key)//如果没有比关键值大的，比较下一个，直到有比关键值大的交换位置
+            while (end > start && a[start] <= key) {//如果没有比关键值大的，比较下一个，直到有比关键值大的交换位置
                 start++;
+            }
             if (a[start] >= key) {
                 int temp = a[start];
                 a[start] = a[end];
