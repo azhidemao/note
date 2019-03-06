@@ -1,5 +1,8 @@
 package com.example.note.jvm;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Created by JIAZ on 2019/3/5.
  */
@@ -25,6 +28,7 @@ public class GCTimes {
         for (int i = 0; i < 1; i++) {
             byte[] b2 = new byte[5 * One_MB];
         }
+
     }
 
 }
