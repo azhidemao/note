@@ -54,6 +54,29 @@ public class JLinkedList {
         return newNode;
     }
 
+    public Object get(int i) {
+        if (i < size >> 1) {
+            Node node = first;
+            for (int j = 0; ; ) {
+                if (j != i) {
+                    node = first.next;
+                    j++;
+                } else {
+                    return node.item;
+                }
+            }
+        } else {
+            Node node = last;
+            for (int j = size - 1; ; ) {
+                if (j != i) {
+                    node = last.pre;
+                    j--;
+                } else {
+                    return node.item;
+                }
+            }
+        }
+    }
 
 
     static class Node<E> {
@@ -75,8 +98,10 @@ public class JLinkedList {
         JLinkedList list = new JLinkedList();
         list.addOffical(1);
         list.addOffical(2);
-        System.out.println(list);
-        LinkedList list1 = new LinkedList();
+        list.addOffical(3);
+        list.addOffical(4);
+        list.addOffical(5);
+        System.out.println(list.get(4));
 
     }
 }
