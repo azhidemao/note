@@ -1,6 +1,7 @@
 package com.example.note.collection.list;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -8,7 +9,22 @@ import java.util.List;
  */
 public class JArrayList {
     public static void main(String[] args) {
-        List list =new ArrayList();
-        Object[] obj = new Object[2];
+        int[][] a = new int[][]{{1,2,3},{1,2}};
+        for (int i=0;i<a.length;i++){
+            for (int j =0;j<a[i].length;j++){
+                System.out.println(a[i][j]);
+            }
+        }
     }
+
+    public int calc(List<List> a){
+        if(a!=null){
+            for(List obj:a){
+                calc(obj);
+            }
+        }
+        return 1;
+    }
+
+
 }
