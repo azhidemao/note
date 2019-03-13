@@ -26,5 +26,4 @@ public class JArrayList {
         return 1;
     }
 
-
 }
